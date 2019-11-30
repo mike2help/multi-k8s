@@ -1,5 +1,5 @@
 {
-    "AWSEBDockerrunVersion": 2,
+    "AWSEBDockerrunVersion": "2",
     "containerDefinitions": [
         {
             "name": "client",
@@ -26,13 +26,13 @@
             "name": "nginx",
             "image": "mike2help/multi-nginx",
             "essential": true,
+            "memory": 128,
             "portMappings": [
                 {
                     "hostPort": 80,
                     "containerPort": 80
                 }
             ],
-            "memory": 128,
             "links": ["client", "server"]
             
         }
